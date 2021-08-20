@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:8040}
+spring:
+  application:
+    name: jpay-java-exercise
+  datasource:
+    url: jdbc:sqlite:sample.db
+    username: admin
+    password: admin
+    driverClassName: org.sqlite.JDBC
+    hikari:
+      maximum-pool-size: 10
+  jpa:
+    show-sql: true
+    database-platform: com.test.jpay.config.SQLDialect
+    hibernate:
+      ddl-auto: validate
+logging:
+  level:
+    com:
+      test:
+        jpay: debug
+    springfox:
+      documentation: info

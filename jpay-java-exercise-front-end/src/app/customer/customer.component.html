@@ -1,0 +1,61 @@
+<div class="form-group " id="main">
+    <div class="row" style="width: 100%;">
+        <div class="col-md-1">
+            <label class=" text-primary font-weight-bold">
+                Filter By
+            </label>
+        </div>
+
+        <div class="col-md-2">
+
+            <select name="filters" id="filters" class="btn btn-info">
+                <option *ngFor="let filter of filters" (click)="selectFilter(filter)">{{filter}}</option>
+            </select>
+        </div>
+
+        <div *ngIf="filterCountry" class="col-md-4" style="display: flex;">
+            <div class="col-md-5">
+                <label class=" text-primary font-weight-bold">
+                    Select Country
+                </label>
+            </div>
+            <div class="col-md-6">
+
+                <select name="country" id="country" class="btn btn-info">
+                    <option *ngFor="let country of countries" (click)="selectCountry(country)">{{country}}</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="row" style="width: 100%; margin-top: 10px;">
+            <table class="table table-hover table-hover table-striped" style="margin-top: 15;">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Full Phone Number</th>
+                        <th scope="col">Country Name</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Country Code</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let customerDto of customerDtos">
+                        <th >{{ customerDto.name }}</th>
+                        <td> {{ customerDto.fullPhoneNumber }} </td>
+                        <td>{{ customerDto.countryName}}</td>
+                        <td>{{ customerDto.state}}</td>
+                        <td>{{ customerDto.countryCode}}</td>
+                        <td>{{ customerDto.number }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div  class="d-flex justify-content-between ">
+            <ngb-pagination [collectionSize]="customerPageResponse.totalNumberOfElements " [maxSize]="5" [(page)]="pageNumber" [pageSize]=5 (pageChange)="getCustomer($event)">
+            </ngb-pagination>
+        </div> 
+    </div>
