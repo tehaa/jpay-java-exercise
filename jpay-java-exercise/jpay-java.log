@@ -1,0 +1,128 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.3)
+
+2021-08-21 17:25:22.463  INFO 96820 --- [           main] c.test.jpay.JpayJavaExerciseApplication  : Starting JpayJavaExerciseApplication v0.0.1-SNAPSHOT using Java 1.8.0_292 on ahmed-Lenovo-V510-15IKB with PID 96820 (/home/ahmed/projects/jpay-java/jpay-java-exercise/target/jpay-java-exercise-0.0.1-SNAPSHOT.jar started by ahmed in /home/ahmed/projects/jpay-java/jpay-java-exercise)
+2021-08-21 17:25:22.466 DEBUG 96820 --- [           main] c.test.jpay.JpayJavaExerciseApplication  : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-21 17:25:22.466  INFO 96820 --- [           main] c.test.jpay.JpayJavaExerciseApplication  : No active profile set, falling back to default profiles: default
+2021-08-21 17:25:23.467  INFO 96820 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-21 17:25:23.532  INFO 96820 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interfaces.
+2021-08-21 17:25:24.281  INFO 96820 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8040 (http)
+2021-08-21 17:25:24.299  INFO 96820 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-21 17:25:24.300  INFO 96820 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-21 17:25:24.391  INFO 96820 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-21 17:25:24.391  INFO 96820 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1858 ms
+2021-08-21 17:25:24.590  INFO 96820 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-21 17:25:24.635  INFO 96820 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-08-21 17:25:24.796  INFO 96820 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-21 17:25:24.900  INFO 96820 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-21 17:25:24.991  INFO 96820 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-21 17:25:25.003  INFO 96820 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: com.test.jpay.config.SQLDialect
+2021-08-21 17:25:25.468  INFO 96820 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-21 17:25:25.474  INFO 96820 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-21 17:25:25.873 DEBUG 96820 --- [           main] com.test.jpay.service.CountryService     : ----->start fill country code map
+2021-08-21 17:25:25.873 DEBUG 96820 --- [           main] com.test.jpay.service.CountryService     : ----->country code map is filled with this values : {(237)=Country [name=Cameroon, code=+237, regex=^\(237\)\ ?[2368]\d{7,8}$], (212)=Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$], (256)=Country [name=Uganda, code=+256, regex=^\(256\)\ ?\d{9}$], (258)=Country [name=Mozambique, code=+258, regex=^\(258\)\ ?[28]\d{7,8}$], (251)=Country [name=Ethiopia, code=+251, regex=^\(251\)\ ?[1-59]\d{8}$]}
+2021-08-21 17:25:25.924  WARN 96820 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-21 17:25:26.381  WARN 96820 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.2021-08-21 17:25:40.266  INFO 96764 --- [nio-8040-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-21 17:25:40.267  INFO 96764 --- [nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-21 17:25:40.268  INFO 96764 --- [nio-8040-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-08-21 17:25:40.327 DEBUG 96764 --- [nio-8040-exec-1] c.t.jpay.controller.CustomerController   : ----->start api /getCustomerPhonePage to get page:0 size :5 of customer phone Dto
+2021-08-21 17:25:40.327 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : -----> Started service method [getCustomerPhonePage] to get customer  phone which start by : 
+Hibernate: select customer0_.id as id1_0_, customer0_.name as name2_0_, customer0_.phone as phone3_0_ from customer customer0_ where customer0_.phone like ? escape ? limit ?
+Hibernate: select count(customer0_.id) as col_0_0_ from customer customer0_ where customer0_.phone like ? escape ?
+2021-08-21 17:25:40.566 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@76f65505
+2021-08-21 17:25:40.568 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:25:40.568  INFO 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:25:40.569 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@579adab0
+2021-08-21 17:25:40.569 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:25:40.569  INFO 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:25:40.569 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@37fb05a4
+2021-08-21 17:25:40.569 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:25:40.569  INFO 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:25:40.569 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@16af0f35
+2021-08-21 17:25:40.570 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:25:40.570  INFO 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:25:40.570 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@52b53e98
+2021-08-21 17:25:40.570 DEBUG 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:25:40.570  INFO 96764 --- [nio-8040-exec-1] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:26:20.452 DEBUG 96764 --- [nio-8040-exec-4] c.t.jpay.controller.CustomerController   : ----->start api /getCustomerPhonePage to get page:0 size :5 of customer phone Dto
+2021-08-21 17:26:20.452 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : -----> Started service method [getCustomerPhonePage] to get customer  phone which start by : 
+Hibernate: select customer0_.id as id1_0_, customer0_.name as name2_0_, customer0_.phone as phone3_0_ from customer customer0_ where customer0_.phone like ? escape ? limit ?
+Hibernate: select count(customer0_.id) as col_0_0_ from customer customer0_ where customer0_.phone like ? escape ?
+2021-08-21 17:26:20.455 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@3997e6dd
+2021-08-21 17:26:20.456 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:26:20.456  INFO 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:26:20.456 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@68c7cd42
+2021-08-21 17:26:20.456 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:26:20.456  INFO 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:26:20.456 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@41ee421d
+2021-08-21 17:26:20.456 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:26:20.456  INFO 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:26:20.456 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@397bc864
+2021-08-21 17:26:20.456 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:26:20.456  INFO 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:26:20.456 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@3fdc6098
+2021-08-21 17:26:20.457 DEBUG 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:26:20.457  INFO 96764 --- [nio-8040-exec-4] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:26:42.145 DEBUG 96764 --- [nio-8040-exec-3] c.t.jpay.controller.CustomerController   : ----->start api /getCustomerPhonePage to get page:3 size :5 of customer phone Dto
+2021-08-21 17:26:42.146 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : -----> Started service method [getCustomerPhonePage] to get customer  phone which start by : 
+Hibernate: select customer0_.id as id1_0_, customer0_.name as name2_0_, customer0_.phone as phone3_0_ from customer customer0_ where customer0_.phone like ? escape ? limit ? offset ?
+Hibernate: select count(customer0_.id) as col_0_0_ from customer customer0_ where customer0_.phone like ? escape ?
+2021-08-21 17:26:42.150 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@54cb3769
+2021-08-21 17:26:42.150 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:26:42.150  INFO 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:26:42.150 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@3daf0bfd
+2021-08-21 17:26:42.150 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:26:42.150  INFO 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:26:42.150 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@2ce7e33a
+2021-08-21 17:26:42.150 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (258) 
+2021-08-21 17:26:42.150  INFO 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->country : Country [name=Mozambique, code=+258, regex=^\(258\)\ ?[28]\d{7,8}$] where prefix is : (258) is returned from map 
+2021-08-21 17:26:42.150 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@6c467e42
+2021-08-21 17:26:42.150 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (258) 
+2021-08-21 17:26:42.150  INFO 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->country : Country [name=Mozambique, code=+258, regex=^\(258\)\ ?[28]\d{7,8}$] where prefix is : (258) is returned from map 
+2021-08-21 17:26:42.151 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@248e63e5
+2021-08-21 17:26:42.151 DEBUG 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (258) 
+2021-08-21 17:26:42.151  INFO 96764 --- [nio-8040-exec-3] com.test.jpay.service.CustomerService    : ----->country : Country [name=Mozambique, code=+258, regex=^\(258\)\ ?[28]\d{7,8}$] where prefix is : (258) is returned from map 
+2021-08-21 17:30:56.785 DEBUG 96764 --- [nio-8040-exec-6] c.t.jpay.controller.CustomerController   : ----->start api /getCustomerPhonePage to get page:0 size :5 of customer phone Dto
+2021-08-21 17:30:56.785 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : -----> Started service method [getCustomerPhonePage] to get customer  phone which start by : 
+Hibernate: select customer0_.id as id1_0_, customer0_.name as name2_0_, customer0_.phone as phone3_0_ from customer customer0_ where customer0_.phone like ? escape ? limit ?
+Hibernate: select count(customer0_.id) as col_0_0_ from customer customer0_ where customer0_.phone like ? escape ?
+2021-08-21 17:30:56.797 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@12c28af0
+2021-08-21 17:30:56.797 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:30:56.798  INFO 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:30:56.798 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@4651a879
+2021-08-21 17:30:56.798 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:30:56.798  INFO 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:30:56.798 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@fc71c22
+2021-08-21 17:30:56.798 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:30:56.798  INFO 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:30:56.798 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@f557fa8
+2021-08-21 17:30:56.798 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:30:56.798  INFO 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:30:56.798 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@9c6e1b8
+2021-08-21 17:30:56.798 DEBUG 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:30:56.798  INFO 96764 --- [nio-8040-exec-6] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:31:06.373 DEBUG 96764 --- [nio-8040-exec-7] c.t.jpay.controller.CustomerController   : ----->start api /getCustomerPhonePage to get page:0 size :5 of customer phone Dto
+2021-08-21 17:31:06.373 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : -----> Started service method [getCustomerPhonePage] to get customer  phone which start by : 
+Hibernate: select customer0_.id as id1_0_, customer0_.name as name2_0_, customer0_.phone as phone3_0_ from customer customer0_ where customer0_.phone like ? escape ? limit ?
+Hibernate: select count(customer0_.id) as col_0_0_ from customer customer0_ where customer0_.phone like ? escape ?
+2021-08-21 17:31:06.377 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@5cc9d363
+2021-08-21 17:31:06.377 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:31:06.378  INFO 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:31:06.378 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@6251f480
+2021-08-21 17:31:06.378 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:31:06.378  INFO 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:31:06.378 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@243af910
+2021-08-21 17:31:06.378 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:31:06.378  INFO 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:31:06.378 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@33677f04
+2021-08-21 17:31:06.379 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:31:06.379  INFO 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
+2021-08-21 17:31:06.379 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->start construct customer phone Dto from customer : com.test.jpay.entity.Customer@2127f0c0
+2021-08-21 17:31:06.379 DEBUG 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->get country from map where phone prefix is : (212) 
+2021-08-21 17:31:06.379  INFO 96764 --- [nio-8040-exec-7] com.test.jpay.service.CustomerService    : ----->country : Country [name=Morocco, code=+212, regex=^\(212\)\ ?[5-9]\d{8}$] where prefix is : (212) is returned from map 
