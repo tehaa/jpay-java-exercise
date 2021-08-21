@@ -41,7 +41,7 @@ public class CustomerControllerTest {
 	}
 
 	@Test
-	void testGetBookings() {
+	void testGetCustomers() {
 		Pageable paging = PageRequest.of(0, 2);
 
 		Customer customer1 = new Customer(1, "Ahmed", "(212) 6007989253");
