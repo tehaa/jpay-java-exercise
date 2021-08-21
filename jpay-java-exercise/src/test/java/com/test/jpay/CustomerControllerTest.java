@@ -17,6 +17,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 
 import com.test.jpay.controller.CustomerController;
 import com.test.jpay.dto.CustomerPhoneDto;
@@ -43,6 +44,8 @@ public class CustomerControllerTest {
 	@Test
 	void testGetCustomers() {
 		Pageable paging = PageRequest.of(0, 2);
+		
+		
 
 		Customer customer1 = new Customer(1, "Ahmed", "(212) 6007989253");
 		Customer customer2 = new Customer(2, "Mohamed", "(212) 698054317");
@@ -52,8 +55,13 @@ public class CustomerControllerTest {
 		customers.add(customer2);
 
 		Page<Customer> cusPage = new PageImpl<>(customers);
+		
+		List<Customer> emptyCustomerList=new LinkedList<Customer>();
+		Page<Customer> emptycusPage = new PageImpl<>(emptyCustomerList);
 
 		when(customerRepo.findByPhoneContaining("", paging)).thenReturn(cusPage);
+
+		when(customerRepo.findByPhoneContaining("(123)", paging)).thenReturn(emptycusPage);
 
 		CustomerPhoneDto customerPhoneDto = new CustomerPhoneDto("Ahmed", "(212) 6007989253", "Morocco", "not valid",
 				"+212", "6007989253");
@@ -66,7 +74,9 @@ public class CustomerControllerTest {
 		customerPhoneDtos.add(customerPhoneDto2);
 
 		assertAll(() -> assertEquals(customerPhoneDtos,
-				customerService.getCustomerPhonePage(paging, "").getBody().getCustomerPhoneDtos()));
+				customerService.getCustomerPhonePage(paging, "").getBody().getCustomerPhoneDtos()),
+				() -> assertEquals(HttpStatus.NO_CONTENT,
+						customerService.getCustomerPhonePage(paging, "(123)").getStatusCode()));
 
 	}
 }
