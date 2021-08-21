@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerDto } from '../model/customer-dto';
+import { CustomerPhoneDto } from '../model/customer-phone-dto';
 import { CustomerPageResponse } from '../model/customer-page-dto';
 import { CustomerService } from '../service/customer.service';
 
@@ -20,7 +20,7 @@ export class CustomerComponent implements OnInit {
   size = 5;
   phonePrefix: any = '';
 
-  customerDtos: CustomerDto[] = [];
+  customerPhoneDtos: CustomerPhoneDto[] = [];
 
   customerPageResponse: CustomerPageResponse
 
@@ -73,7 +73,7 @@ export class CustomerComponent implements OnInit {
     this.customerService.getCustomers(page, this.size, this.phonePrefix).subscribe(
       (response: any) => {
         this.customerPageResponse = response;
-        this.customerDtos=this.customerPageResponse.customerDtos ;
+        this.customerPhoneDtos=this.customerPageResponse.customerPhoneDtos ;
       },
       error => {
         console.log(error);

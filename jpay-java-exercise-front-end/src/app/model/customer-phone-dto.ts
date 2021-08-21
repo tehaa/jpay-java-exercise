@@ -1,4 +1,4 @@
-export class CustomerDto {
+export class CustomerPhoneDto {
     name: string;
     fullPhoneNumber: string;
     countryName: string;

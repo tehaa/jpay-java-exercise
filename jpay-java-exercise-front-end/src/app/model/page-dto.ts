@@ -1,4 +1,3 @@
-import { CustomerDto } from "./customer-dto";
 
 export class PageDto {
     pageNumber: number;

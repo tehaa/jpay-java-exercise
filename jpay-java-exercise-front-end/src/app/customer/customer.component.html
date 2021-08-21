@@ -41,13 +41,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let customerDto of customerDtos">
-                        <th >{{ customerDto.name }}</th>
-                        <td> {{ customerDto.fullPhoneNumber }} </td>
-                        <td>{{ customerDto.countryName}}</td>
-                        <td>{{ customerDto.state}}</td>
-                        <td>{{ customerDto.countryCode}}</td>
-                        <td>{{ customerDto.number }}</td>
+                    <tr *ngFor="let customerPhoneDto of customerPhoneDtos">
+                        <th >{{ customerPhoneDto.name }}</th>
+                        <td> {{ customerPhoneDto.fullPhoneNumber }} </td>
+                        <td>{{ customerPhoneDto.countryName}}</td>
+                        <td>{{ customerPhoneDto.state}}</td>
+                        <td>{{ customerPhoneDto.countryCode}}</td>
+                        <td>{{ customerPhoneDto.number }}</td>
                     </tr>
                 </tbody>
             </table>

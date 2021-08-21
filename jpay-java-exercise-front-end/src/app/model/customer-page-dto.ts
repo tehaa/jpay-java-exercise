@@ -1,13 +1,13 @@
-import { CustomerDto } from "./customer-dto";
+import { CustomerPhoneDto } from "./customer-phone-dto";
 import { PageDto } from "./page-dto";
 
 
 export class CustomerPageResponse extends PageDto {
-    customerDtos :CustomerDto[];
+    customerPhoneDtos :CustomerPhoneDto[];
 
     constructor(){
         super();
-        this.customerDtos={} as any;
+        this.customerPhoneDtos={} as any;
     }
   
 }
