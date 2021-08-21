@@ -1,12 +1,12 @@
 # jpay-java-exercise
 ## jpay-java-exercise
-##the folder contains two folder
+## the folder contains two folder
 
 1-folder for front-end (jpay-java-exercise-front-end) contain the front-end (angular)
 
 2-folder for back-end (jpay-java-exercise) contain the back-end (springboot) 
 
-##import the back-end
+## import the back-end
 
 you can import the back-end from eclipse  `import->existing maven project>browse to a directory`  and you pom file will import the project
 
@@ -19,17 +19,17 @@ run  `mvn clean install`
 
 run `nohup java -jar target/jpay-java-exercise-0.0.1-SNAPSHOT.jar > jpay-java.log &`
 
-##make sure project run successfully 
+## make sure project run successfully 
 
 run `tail -f jpay-java.log` to view logs 
 
-##get page  of customer phone using this curl 
+## get page  of customer phone using this curl 
 
 curl --location --request GET 'localhost:8040/api/customer?page=0&size=5' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json'
 
-##import the front-end
+## import the front-end
 
 go to jpay-java-exercise-front-end directory
 
