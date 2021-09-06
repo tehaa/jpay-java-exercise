@@ -10,5 +10,6 @@ import com.test.jpay.entity.Customer;
 @Repository
 public interface CustomerRepo extends JpaRepository<Customer, Integer> {
 
-	Page<Customer> findByPhoneContaining(String phonePrefix, Pageable paging);
+	Page<Customer> findByPhoneStartingWith(String phonePrefix, Pageable paging);
+
 }

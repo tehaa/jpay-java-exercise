@@ -42,7 +42,7 @@ public class CustomerService {
 				phonePrefix);
 
 		// get page of customer by pageable object and phone prefix
-		Page<Customer> customers = customerRepo.findByPhoneContaining(phonePrefix, paging);
+		Page<Customer> customers = customerRepo.findByPhoneStartingWith(phonePrefix, paging);
 
 		// construct customer phone page info from customer page object
 		CustomerPhonePage customerPageResponse = new CustomerPhonePage(customers.getNumber(), customers.getSize(),
