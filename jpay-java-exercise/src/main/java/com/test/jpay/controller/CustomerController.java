@@ -44,7 +44,7 @@ public class CustomerController {
 			@RequestParam(required = false, defaultValue = "5") Integer size,
 			@RequestParam(required = false, defaultValue = "") String phonePrefix) {
 
-		LOGGER.debug("----->start api /getCustomerPhonePage to get page:{} size :{} of customer phone Dto", page, size);
+		LOGGER.debug("----->start api /getttCustomerPhonePage to get page:{} size :{} of customer phone Dto", page, size);
 
 		Pageable paging = PageRequest.of(page, size);
 
