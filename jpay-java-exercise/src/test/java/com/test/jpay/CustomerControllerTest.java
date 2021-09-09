@@ -59,9 +59,9 @@ public class CustomerControllerTest {
 		List<Customer> emptyCustomerList=new LinkedList<Customer>();
 		Page<Customer> emptycusPage = new PageImpl<>(emptyCustomerList);
 
-		when(customerRepo.findByPhoneContaining("", paging)).thenReturn(cusPage);
+		when(customerRepo.findByPhoneStartingWith("", paging)).thenReturn(cusPage);
 
-		when(customerRepo.findByPhoneContaining("(123)", paging)).thenReturn(emptycusPage);
+		when(customerRepo.findByPhoneStartingWith("(123)", paging)).thenReturn(emptycusPage);
 
 		CustomerPhoneDto customerPhoneDto = new CustomerPhoneDto("Ahmed", "(212) 6007989253", "Morocco", "not valid",
 				"+212", "6007989253");
